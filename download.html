@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Free 15-Minute Launch Guide is Ready!</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for professional aesthetic */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+            line-height: 1.6;
+        }
+        .container-box {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-radius: 12px;
+            background-color: #ffffff;
+            padding: 2.5rem;
+        }
+        .download-box {
+            border: 3px solid #10b981; /* Emerald Green */
+            background-color: #ecfdf5; /* Light Green */
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .cta-upsell {
+            border: 4px solid #007bff; /* Primary Blue for professional feel */
+            background-color: #eff6ff; /* Light Blue */
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="max-w-3xl mx-auto px-4 py-12">
+
+    <!-- HEADER & THANK YOU -->
+    <header class="text-center mb-8">
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-2">Success! Your Guide is Ready. 🚀</h1>
+        <p class="text-xl text-gray-600 font-medium">The simplest path to beating inflation starts here.</p>
+    </header>
+
+    <!-- DOWNLOAD SECTION -->
+    <section class="container-box">
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Enter Your Email for Instant Download</h2>
+        <p class="text-gray-700 mb-6">We're delivering the **Emergency Fund Checklist** now! We just need your email to ensure we can send you future critical updates and a permanent link to your guide.</p>
+
+        <div class="download-box">
+            <form id="downloadForm" onsubmit="return handleDownload(event);">
+                <p class="text-lg font-semibold text-green-700 mb-4" id="formMessage">Enter your best email below:</p>
+
+                <input type="email" id="userEmail" placeholder="you@example.com" required
+                       class="w-full md:w-3/4 p-3 mb-4 text-gray-700 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+
+                <button type="submit" id="downloadButton"
+                        class="w-full md:w-3/4 inline-block bg-green-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-green-700 transition duration-300 shadow-md">
+                    📥 Send & Download the FREE Guide
+                </button>
+
+                <div id="successMessage" style="display:none; color:#10b981; margin-top:15px; font-weight: bold;">
+                    ✅ Download Starting! Thank you for confirming your email.
+                </div>
+                <div id="errorMessage" style="display:none; color:#ef4444; margin-top:15px; font-weight: bold;">
+                    ❌ Submission failed. Please try again.
+                </div>
+            </form>
+        </div>
+
+        <p class="text-sm text-gray-500 text-center">*(Your guide will automatically begin downloading after submitting your email.)*</p>
+    </section>
+
+    <!-- --- UPSELL ADVERTISEMENT (Phase 2 Strategy) --- -->
+    <section class="cta-upsell">
+        <h2 class="text-3xl font-extrabold text-blue-700 mb-4">You Solved Step 1. What About the Next 30 Years?</h2>
+        <p class="text-xl text-gray-700 mb-6 font-medium">The checklist is your shield. Now, you need the **Engine of Wealth**.</p>
+
+        <div class="bg-white p-6 rounded-lg shadow-inner mb-6 border border-gray-200">
+            <p class="text-lg text-gray-800 mb-4">You are a busy professional. You don't have time to worry about market crashes, complex broker fees, or *which* ETF to buy.</p>
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-8">
+                <div class="flex-1 text-center">
+                    <p class="text-4xl font-bold text-red-600 mb-1">-$5,215</p>
+                    <p class="text-sm text-gray-600">Purchasing Power Lost (Saving over 30 yrs)</p>
+                </div>
+                <div class="flex-1 text-center">
+                    <p class="text-4xl font-bold text-green-600 mb-1">+$754,717</p>
+                    <p class="text-sm text-gray-600">Compounding Profit (Investing over 30 yrs)</p>
+                </div>
+            </div>
+            <p class="mt-4 text-center text-lg font-semibold text-gray-800">The difference is the system.</p>
+        </div>
+
+
+        <p class="text-2xl font-semibold text-gray-800 mb-6">Get the Full **Automated Investor Blueprint**—The complete, one-time setup that guarantees you simplicity and consistency.</p>
+
+        <a href="https://invest.gees.ro" class="inline-block bg-red-600 text-white px-10 py-4 rounded-full font-extrabold text-xl hover:bg-red-700 transition duration-300 uppercase tracking-wider shadow-lg">
+            Unlock the Full Course (Only today $349)
+        </a>
+        <p class="mt-4 text-sm text-gray-600">The only investment system designed for zero mental bandwidth.</p>
+
+    </section>
+
+</div>
+
+<script>
+    // --- Checklist Content Function ---
+    function getChecklistContent() {
+        return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Automated Investor: Emergency Fund Security Checklist</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #1a4f78;
+            font-size: 2em;
+            text-align: center;
+            border-bottom: 3px solid #ef4444; /* Red for safety/critical action */
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #ef4444;
+            font-size: 1.5em;
+            margin-top: 30px;
+        }
+        .step {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            background-color: #fef2f2; /* Light red/safety color */
+        }
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .step-header input[type="checkbox"] {
+            transform: scale(1.5);
+            margin-right: 15px;
+            accent-color: #ef4444;
+        }
+        .step-header label {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #1a4f78;
+        }
+        .step-details {
+            margin-left: 30px;
+            padding-left: 10px;
+            border-left: 2px solid #e0e0e0;
+            font-style: italic;
+            color: #555;
+        }
+        .note {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            font-weight: 600;
+            border: 1px solid #ffc107;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Your Financial Shield: Emergency Fund Security Checklist 🛡️</h1>
+    <p style="text-align: center; margin-top: -10px;">*The non-negotiable first step before you invest a single dollar.*</p>
+
+    <h2>The Three Phases of Safety</h2>
+
+    <div class="step">
+        <div class="step-header">
+            <input type="checkbox" id="check1">
+            <label for="check1">1. Determine Your Monthly Baseline</label>
+        </div>
+        <div class="step-details">
+            <p>Calculate your **absolute minimum** monthly expenses (rent/mortgage, utilities, food, insurance, transport). This figure is your target unit.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-header">
+            <input type="checkbox" id="check2">
+            <label for="check2">2. Set Your Fund Target (3-12 Months)</label>
+        </div>
+        <div class="step-details">
+            <p>**Target 1 (Minimum Safety):** 3 months of expenses.</p>
+            <p>**Target 2 (Ideal Safety for Professionals):** 6-12 months of expenses (covers potential extended job search time).</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-header">
+            <input type="checkbox" id="check3">
+            <label for="check3">3. Choose the Right Location</label>
+        </div>
+        <div class="step-details">
+            <p>Money must be **Safe** (low risk) and **Liquid** (easy to access).</p>
+            <p><strong>Approved Locations:</strong> High-Yield Savings Account or a Money Market Fund (MMF).</p>
+            <p><strong>Forbidden Locations:</strong> The Stock Market (ETFs, individual stocks).</p>
+        </div>
+    </div>
+
+    <div class="note">
+        **CRITICAL RULE:** This money is not for growth; it is for peace of mind. By funding this shield first, you guarantee you will **never panic sell** your long-term investments during a market downturn.
+    </div>
+
+</body>
+</html>`;
+    }
+
+    // --- Main Download Handler ---
+    async function handleDownload(event) {
+        event.preventDefault();
+
+        const emailInput = document.getElementById('userEmail');
+        const email = emailInput.value;
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+        const downloadButton = document.getElementById('downloadButton');
+        const formMessage = document.getElementById('formMessage');
+
+        errorMessage.style.display = 'none';
+
+        if (!email || !emailInput.checkValidity()) {
+            emailInput.reportValidity();
+            return false;
+        }
+
+        // Disable button during submission
+        downloadButton.disabled = true;
+        downloadButton.classList.remove('bg-green-600', 'hover:bg-green-700');
+        downloadButton.classList.add('bg-gray-400', 'cursor-not-allowed');
+        formMessage.textContent = 'Submitting email...';
+
+        const ENDPOINT = 'https://bjcvqszrjaoasw7vfuivjhnamy0sdxkl.lambda-url.us-east-1.on.aws/'; // Target email endpoint
+
+        try {
+            const response = await fetch(ENDPOINT, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email: email, source: 'emergency_fund_lead' })
+            });
+
+            if (!response.ok) {
+                // Throw error if the response status is not 2xx
+                throw new Error(`Server error: ${response.status}`);
+            }
+
+            // --- SUCCESS ---
+            formMessage.textContent = 'Email submitted successfully!';
+            successMessage.style.display = 'block';
+
+            // 3. Trigger the Download
+            const checklistContent = getChecklistContent();
+            const blob = new Blob([checklistContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+
+            setTimeout(() => {
+                const downloadLink = document.createElement('a');
+                downloadLink.href = url;
+                downloadLink.download = 'Emergency_Fund_Checklist.html';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+                URL.revokeObjectURL(url);
+            }, 500);
+
+        } catch (error) {
+            console.error("Email submission failed:", error);
+            errorMessage.style.display = 'block';
+            formMessage.textContent = 'Enter your best email below:';
+
+            // Re-enable button on failure (allowing user to try again)
+            downloadButton.disabled = false;
+            downloadButton.classList.remove('bg-gray-400', 'cursor-not-allowed');
+            downloadButton.classList.add('bg-green-600', 'hover:bg-green-700');
+
+        }
+
+        return false;
+    }
+</script>
+
+</body>
+</html>
